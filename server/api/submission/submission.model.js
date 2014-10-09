@@ -28,8 +28,8 @@ var SubmissionSchema = new Schema({
     tshirt: String,
     tshirtCo: String,
     tshirtCo2: String,
-    otherInfo: String
-
+    otherInfo: String,
+    copy: Boolean
 });
 
 module.exports = mongoose.model('Submission', SubmissionSchema);

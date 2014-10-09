@@ -4,7 +4,12 @@ angular.module('ursamajorApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [{
       'title': 'Home',
-      'link': '/'
+      'link': '/'},
+        {
+            'title': 'Submission',
+            'link': '/submissionForm'
+
+
     }];
 
     $scope.isCollapsed = true;
