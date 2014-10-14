@@ -33,4 +33,8 @@ angular.module('ursamajorApp')
         $scope.value = [
             {titleName: String}
         ];
+
+        $scope.submitSubmission = function() {
+
+        }
   });

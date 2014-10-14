@@ -1,4 +1,41 @@
-<div class="col-md-12">
+<form class="col-md-12" role = "form" ng-submit="submitSubmission()">
+    <h1>2015 URS Submission Form</h1>
+    <!--Need to create some system where if it is required a red 'Required' shows up next to the header.-->
+    <div>
+        <h3>Have you met with your project adviser for their review of your abstract and their approval to submit?</h3>
+        <form required ng-repeat="feature in yesORno">
+            <label>
+                <input type="radio" name="feature">{{feature}}
+            </label>
+        </form>
+    </div>
+
+    <div>
+        <p>
+           The UMM Undergraduate Research Symposium is a forum for UMM students to present their research, creative, and scholarly work representing the Divisions of Education, Humanities, Science and Mathematics, and Social Sciences at UMM.
+           Accordingly, submissions from students enrolled at other institutions will not be accepted.
+        </p>
+
+        <p>
+           Please remember to copy yourself, all co-presenters, and your faculty sponsor on your submission.
+           This is how you will access your abstract to make any changes requested in the future.
+        </p>
+
+        <p>URS submission descriptions:</p>
+
+        <p>
+            General criteria
+           All submissions should be no more than 250 words and should contain the following elements:
+        </p>
+        <ol>
+            <li>A concise explanation of the creative or scholarly implications of the project.  What is the creative/intellectual context of your work?</li>
+            <li>Language that is clear and comprehensible to those who are not experts in the field.</li>
+            <li>Professional tone, including appropriate word choice and correct grammar, spelling, and punctuation.</li>
+        </ol>
+
+        <p>Field-specific criteria
+           Mark the category below that best describes your project.  Your 250-word submission must also include the appropriate field-specific elements listed below.
+        </p>
     <h1>2015 URS Submission Form</h1>
     <!--Need to create some system where if it is required a red 'Required' shows up next to the header.-->
     <div>
@@ -117,7 +154,7 @@
         </label><br>
 
         <label>First Name Primary Student Presenter/Contact Person<br>
-            <input required type="text" name="studentFirst">
+            <input required type="text" name="studentFirst">with
         </label><br>
 
         <label>Last Name Student Co-Presenter/Contact Person<br>
@@ -254,4 +291,227 @@
     <label>
         <input type="radio" name="copy">Send me a copy of my responses.
     </label>
-</div>
+
+    <input type="submit" value="Submit" ng-click = "submitSubmission()">
+
+
+        <p>Artist statements</p>
+        <ol>
+            <li>A concise explanation of the subject matter or concepts you are exploring (what you do).</li>
+            <li>A concise explanation of artistic goals (why you do what you do).</li>
+            <li>A concise explanation of processes, production methods, tools, media, innovations, etc. (how you do what you do).</li>
+            <li>A concise explanation of historical context, including how this work builds on, differs from, or responds to existing work or performances.</li>
+        </ol>
+
+        <p>Humanities proposals</p>
+        <ol>
+            <li>A concise explanation of the relevant intellectual and scholarly context of your work.</li>
+            <li>A concise explanation of how your project fits within this intellectual context.  Does it extend, revise, or complicate, or provide a new way of looking at existing work in the field?</li>
+            <li>A clear statement of argument: a specific, debatable claim, not merely a summary of others’ research.</li>
+            <li>An explanation of the significance and broader implications of your work.</li>
+        </ol>
+
+        Science & Social Science abstracts
+        <ol>
+            <li>A concise explanation of the scholarly context for the project with a statement of the project’s specific objective.</li>
+            <li>A clear explanation of the methods used to address the objective.</li>
+            <li>A clear explanation of the results or findings.</li>
+            <li>An explanation of the significance and broader implications of the project's results.</li>
+        </ol>
+
+        <p>If you are unsure which category best fits your project, please consult your faculty sponsor.</p>
+    </div>
+
+    <div>
+        <label>Title of Presentation<br>
+            <textarea name="title" rows="2" cols="50" required>
+            </textarea>
+        </label>
+        <!-- ng-model="value.titleName" Should work in textarea tag to add ability to add red hylight to textarea if nothing is in it after being unselected from. -->
+    </div>
+
+    <div>
+        <label>Format of Submission<br>
+            <select required name="format">
+               <option ng-repeat="type in format">{{type}}</option>
+            </select>
+        </label>
+    </div>
+
+    <div>
+        <label>Artist Statement/Proposal/Abstract (1000 character limit, approx 250 words)</label>
+            <p>
+               Paste your text in the box below. Figures and special characters will need to be submitted as a separate document.
+               Please e-mail as a Word or PDF document to sferrian@morris.umn.edu
+            </p>
+        <label>
+            <textarea required rows="6" cols="50" name="abstract"></textarea>
+        </label>
+    </div>
+
+    <div>
+        <label>Type of Presentation (Choose One)<br>
+            <select required name="type">
+                <option ng-repeat="pres in type">{{pres}}</option>
+            </select>
+        </label>
+    </div>
+
+    <div>
+        <label>Because of space constraints, we may not be able to have everyone do their preferred type of presentation.
+               If necessary, would you be willing to give your presentation in another format?
+        </label>
+        <p>No change in format will be made without contacting the presenter first.</p>
+        <form required ng-repeat="space in yesORno">
+            <label>
+                <input type="radio" name="space" ng-value="yesORno">{{space}}
+            </label>
+        </form>
+    </div>
+
+    <div>
+        <label>Last Name Primary Student Presenter/Contact Person<br>
+            <input required type="text" name="studentLast">
+        </label><br>
+
+        <label>First Name Primary Student Presenter/Contact Person<br>
+            <input required type="text" name="studentFirst">with
+        </label><br>
+
+        <label>Last Name Student Co-Presenter/Contact Person<br>
+            <input type="text" name="studentCoLast">
+        </label><br>
+
+        <label>First Name Student Co-Presenter/Contact Person<br>
+            <input type="text" name="studentCoFirst">
+        </label><br>
+
+        <label>Last Name Student Co-Presenter/Contact Person<br>
+            <input type="text" name="studentCo2Last">
+        </label><br>
+
+        <label>First Name Student Co-Presenter/Contact Person<br>
+            <input type="text" name="studentCo2First">
+        </label>
+    </div>
+
+    <div>
+        <label>Primary student email</label>
+        <p>Please complete with full email (ex. include @morris.umn.edu)</p>
+        <label>
+            <input required type="text" name="studentEmail">
+        </label><br>
+
+        <label>Co presenters student email</label>
+        <p>Include all presenters separated by a comma</p>
+        <label>
+            <input type="text" name="studentCoEmail">
+        </label><br>
+
+        <label>Academic Discipline for Project</label>
+        <label>
+            <input type="text" name="studentCo2Email">
+        </label>
+    </div>
+
+    <div>
+        <label>Academic Discipline for Project</label>
+        <label>
+            <input required type="text" name="discipline">
+        </label>
+    </div>
+
+    <div>
+        <label>Sponsoring Organization or Fund (Choose Any Applicable)</label>
+        <form required>
+
+                <input type="checkbox" name="UROP">UPROP<br>
+                <input type="checkbox" name="MAP">MAPP<br>
+                <input type="checkbox" name="MMP">MMPP<br>
+                <input type="checkbox" name="LSAMP">LSAMPP<br>
+                <input type="checkbox" name="otherFund">Other:<input type="text" name="otherFund">
+
+        </form>
+    </div>
+    <!--Suppose to be able to choose multiple but currently cannot un-check an input.-->
+
+    <div>
+        <label>Faculty Sponsor/Project Adviser</label>
+        <p>Every submitted project is required to have a faculty sponsor or project adviser identified</p>
+        <label>
+            <input required type="text" name="advisor">
+        </label><br>
+
+        <label>Faculty Sponsor/Project Adviser Email Address</label>
+        <p>Enter the full email address for the sponsor/adviser</p>
+        <label>
+            <input required type="text" name="advisorEmail">
+        </label>
+    </div>
+
+    <div>
+        <label>
+            The URS features one presentation in the opening ceremony.
+            This presentation should have broader appeal with interdisciplinary components, and may easily accommodate a performance component.
+            The featured presenter will have more time, as well as a bigger room than regular presentations.
+            Would you be interested in having your presentation featured during the opening ceremony?
+        </label>
+        <form required ng-repeat="feature in yesORno">
+            <label>
+                <input type="radio" name="feature">{{feature}}
+            </label>
+        </form>
+    </div>
+
+    <div>
+        <label>
+            Each presentation room will have available an overhead projector and a Macintosh or PC computer with video projection capabilities.
+            Do you anticipate needing any additional Media Services equipment? Please explain in detail:
+            <input type="text" name="mediaNeeds" id="mediaNeeds"/>
+        </label>
+
+        <label>
+            Do you anticipate any special room location, non-media services equipment (i.e., recital hall, piano, etc.), or
+            scheduling requirements (i.e., several groups holding a forum that would require more than the allotted 15 minutes)?
+            Please explain in detail.<br>
+            <input type="text" name="otherNeeds">
+        </label>
+    </div>
+
+    <div>
+        <label>T-Shirt for PRIMARY STUDENT PRESENTER</label>
+        <p>All sizes are US adult sizes</p>
+        <label>
+            <select required name="sizes">
+                <option></option>
+                <option ng-repeat="size in sizes">{{size}}</option>
+            </select>
+        </label>
+
+        <label>T-Shirt for STUDENT CO-PRESENTER(S) (Check all needed, if multiple sizes (e.g., 2 mediums) are needed, indicate the total number in the "other" response)</label>
+        <p>All sizes are US adult sizes</p>
+        <form ng-repeat="size in sizes">
+            <label>
+                <input type="radio" name="shirt">{{size}}<br>
+            </label>
+        </form>
+        <label>
+            <input type="radio" name="shirt"> Other:
+            <input type="text" name="otherShirt">
+        </label>
+    </div>
+
+    <div>
+        <label>
+            Is there anything else you would like us to know about your presentation?<br>
+            <textarea rows="10" cols="50"></textarea>
+        </label>
+    </div>
+
+    <h3>PLEASE MAKE SURE TO COPY YOURSELF ON YOUR RESPONSE, AND DO NOT DELETE THE EMAIL THAT YOU RECEIVE.</h3>
+    <label>
+        <input type="checkbox" name="copy">Send me a copy of my responses.
+    </label>
+
+    <input type="submit" value="Submit">
+</form>
