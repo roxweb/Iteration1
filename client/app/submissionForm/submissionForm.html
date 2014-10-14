@@ -106,7 +106,7 @@
         <p>No change in format will be made without contacting the presenter first.</p>
         <form required ng-repeat="space in yesORno">
             <label>
-                <input type="radio" name="space">{{space}}
+                <input type="radio" name="space" ng-value="yesORno">{{space}}
             </label>
         </form>
     </div>
