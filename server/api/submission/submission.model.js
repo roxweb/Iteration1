@@ -4,10 +4,11 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var SubmissionSchema = new Schema({
+    advisorMeet: Boolean,
     titleName: String,
     format: String,
     abstract: String,
-    typeofPres: String,
+    typeOfPres: String,
     flexibleType: Boolean,
     lastName: String,
     firstName: String,
@@ -27,9 +28,7 @@ var SubmissionSchema = new Schema({
     otherNeeds: String,
     tshirt: String,
     tshirtCo: String,
-    tshirtCo2: String,
-    otherInfo: String,
-    copy: Boolean
+    otherInfo: String
 });
 
 module.exports = mongoose.model('Submission', SubmissionSchema);
