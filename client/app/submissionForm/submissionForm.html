@@ -1,13 +1,16 @@
-<form class="col-md-12" role = "form" ng-submit="submitSubmission()">
+<form class="col-md-12" role = "form" ng-submit="submitS()">
     <h1>2015 URS Submission Form</h1>
-    <!--Need to create some system where if it is required a red 'Required' shows up next to the header.-->
     <div>
         <h3>Have you met with your project adviser for their review of your abstract and their approval to submit?</h3>
         <form required name="advisorMeet">
             <label>
                 <input type="radio" name="yesORno">Yes
+            </label>
+                <br>
+            <label>
                 <input type="radio" name="yesORno">No
             </label>
+
         </form>
     </div>
 
@@ -67,15 +70,15 @@
 
     <div>
         <label>Title of Presentation<br>
-            <textarea name="titleName" rows="2" cols="50" required></textarea>
+            <textarea id="titleName" rows="2" cols="50" ng-model="titleName"required></textarea>
         </label>
         <!-- ng-model="value.titleName" Should work in textarea tag to add ability to add red hylight to textarea if nothing is in it after being unselected from. -->
     </div>
 
     <div>
         <label>Format of Submission<br>
-            <select required name="format">
-               <option ng-repeat="type in format">{{type}}</option>
+            <select required name="format" ng-model = "format">
+               <option ng-repeat="type in format" ng-model="format">{{type}}</option>
             </select>
         </label>
     </div>
@@ -87,24 +90,24 @@
                Please e-mail as a Word or PDF document to sferrian@morris.umn.edu
             </p>
         <label>
-            <textarea required rows="6" cols="50" name="abstract"></textarea>
+            <textarea required rows="6" cols="50" name="abstract" ng-model="abstract"></textarea>
         </label>
     </div>
 
     <div>
         <label>Type of Presentation (Choose One)<br>
-            <select required name="typeOfPres">
+            <select required name="typeOfPres" ng-model="type">
                 <option ng-repeat="pres in type">{{pres}}</option>
             </select>
         </label>
     </div>
 
     <div>
-        <label>Because of space constraints, we may not be able to have everyone do their preferred type of presentation.
+        <p>Because of space constraints, we may not be able to have everyone do their preferred type of presentation.
                If necessary, would you be willing to give your presentation in another format?
-        </label>
+        </p>
         <p>No change in format will be made without contacting the presenter first.</p>
-        <form required name="flexibleType">
+        <form required name="flexibleType" ng-model="flexibleType">
             <label>
                 <input type="radio" name="yesORno">Yes
             </label>
@@ -116,53 +119,53 @@
 
     <div>
         <label>Last Name Primary Student Presenter/Contact Person<br>
-            <input required type="text" name="lastName">
+            <input required type="text" name="lastName" ng-model="lastName">
         </label><br>
 
         <label>First Name Primary Student Presenter/Contact Person<br>
-            <input required type="text" name="firstName">with
+            <input required type="text" name="firstName" ng-model="firstName">with
         </label><br>
 
         <label>Last Name Student Co-Presenter/Contact Person<br>
-            <input type="text" name="lastNameCo">
+            <input type="text" name="lastNameCo" ng-model="lastNameCo">
         </label><br>
 
         <label>First Name Student Co-Presenter/Contact Person<br>
-            <input type="text" name="firstNameCo">
+            <input type="text" name="firstNameCo" ng-model="firstNameCo">
         </label><br>
 
         <label>Last Name Student Co-Presenter/Contact Person<br>
-            <input type="text" name="lastNameCo2">
+            <input type="text" name="lastNameCo2" ng-model="lastNameCo2">
         </label><br>
 
         <label>First Name Student Co-Presenter/Contact Person<br>
-            <input type="text" name="firstNameCo2">
+            <input type="text" name="firstNameCo2" ng-model="firstNameCo2">
         </label>
     </div>
 
     <div>
-        <label>Primary student email</label>
+        <h4>Primary student email</h4>
         <p>Please complete with full email (ex. include @morris.umn.edu)</p>
         <label>
-            <input required type="text" name="studentEmail">
+            <input required type="text" name="studentEmail" ng-model="studentEmail">
         </label><br>
 
-        <label>Co presenters student email</label>
+        <h4>Co presenters student email</h4>
         <p>Include all presenters separated by a comma</p>
         <label>
-            <input type="text" name="studentCoEmail">
+            <input type="text" name="studentCoEmail" ng-model="studentCoEmail">
         </label><br>
 
-        <label>Academic Discipline for Project</label>
+        <h4>Co presenters student email</h4>
         <label>
-            <input type="text" name="studentCo2Email">
+            <input type="text" name="studentCo2Email" ng-model="studentCo2Email">
         </label>
     </div>
 
     <div>
-        <label>Academic Discipline for Project</label>
+        <h4>Academic Discipline for Project</h4>
         <label>
-            <input required type="text" name="discipline">
+            <input required type="text" name="discipline" ng-model="discipline">
         </label>
     </div>
 
@@ -170,7 +173,7 @@
         <label>Sponsoring Organization or Fund (Choose Any Applicable)</label>
         <form required name="sponsor">
             <label>
-                <input type="checkbox" name="UROP">UROP
+                <input type="checkbox" name="UROP" >UROP
             </label><br>
             <label>
                 <input type="checkbox" name="MAP">MAP
@@ -190,19 +193,19 @@
 
         </form>
     </div>
-    <!--Suppose to be able to choose multiple but currently cannot un-check an input.-->
+
 
     <div>
-        <label>Faculty Sponsor/Project Adviser</label>
+        <h4>Faculty Sponsor/Project Adviser</h4>
         <p>Every submitted project is required to have a faculty sponsor or project adviser identified</p>
         <label>
-            <input required type="text" name="advisor">
+            <input required type="text" name="advisor" ng-model="advisor">
         </label><br>
 
         <label>Faculty Sponsor/Project Adviser Email Address</label>
         <p>Enter the full email address for the sponsor/adviser</p>
         <label>
-            <input required type="text" name="advisorEmail">
+            <input required type="text" name="advisorEmail" ng-model="advisorEmail">
         </label>
     </div>
 
@@ -213,7 +216,7 @@
             The featured presenter will have more time, as well as a bigger room than regular presentations.
             Would you be interested in having your presentation featured during the opening ceremony?
         </label>
-        <form required name="feature">
+        <form required name="feature" ng-model="feature">
             <label>
                 <input type="radio" name="feature">Yes
             </label>
@@ -228,14 +231,14 @@
         <label>
             Each presentation room will have available an overhead projector and a Macintosh or PC computer with video projection capabilities.
             Do you anticipate needing any additional Media Services equipment? Please explain in detail:
-            <input type="text" name="mediaNeeds" id="mediaNeeds"/>
+            <input type="text" name="mediaNeeds" id="mediaNeeds" ng-model="mediaNeeds">
         </label>
 
         <label>
             Do you anticipate any special room location, non-media services equipment (i.e., recital hall, piano, etc.), or
             scheduling requirements (i.e., several groups holding a forum that would require more than the allotted 15 minutes)?
             Please explain in detail.<br>
-            <input type="text" name="otherNeeds">
+            <input type="text" name="otherNeeds" ng-model="otherNeeds">
         </label>
     </div>
 
@@ -245,13 +248,13 @@
         <label>
             <select required name="tshirt">
                 <option></option>
-                <option ng-repeat="size in sizes">{{size}}</option>
+                <option ng-repeat="size in sizes" ng-model="sizes">{{size}}</option>
             </select>
         </label>
         <br>
         <label>T-Shirt for STUDENT CO-PRESENTER(S) (Check all needed, if multiple sizes (e.g., 2 mediums) are needed, indicate the total number in the "other" response)</label>
         <p>All sizes are US adult sizes</p>
-        <form name="tshirtCo">
+        <form name="tshirtCo" ng-model="tshirtCo">
             <label>
                 <input type="radio" name="shirt">Small
             </label><br>
@@ -271,13 +274,13 @@
                 <input type="radio" name="shirt"> Other:
             </label>
                 <label>
-                    <input type="text" name="otherShirt">
+                    <input type="text" name="otherShirt" ng-model="otherShirt">
                 </label>
         </form>
     </div>
 
     <div>
-        <form name="otherInfo">
+        <form name="otherInfo" ng-model="otherInfo">
             <label>
                 Is there anything else you would like us to know about your presentation?<br>
                 <textarea rows="10" cols="50"></textarea>

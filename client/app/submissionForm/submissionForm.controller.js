@@ -4,14 +4,12 @@ angular.module('ursamajorApp')
   .controller('SubmissionformCtrl', function ($scope, $http) {
 
         $scope.format = [
-            '',
             'Artist Statement',
             'Humanities Proposal',
             'Science or Social Science Abstract'
         ];
 
         $scope.type = [
-            '',
             'Poster or Visual Display',
             'Oral Presentation',
             'Performance'
@@ -34,19 +32,19 @@ angular.module('ursamajorApp')
             {titleName: String}
         ];
 
-        $scope.submitSubmission = function() {
+        $scope.submitS = function() {
         $http.post('/api/submissions', {
-            titleName: $scope.title,
+            titleName: $scope.titleName,
             format: $scope.format,
             abstract: $scope.abstract,
             typeofPres: $scope.type,
-            flexibleType: $scope.space,
-            lastName: $scope.studentLast,
-            firstName: $scope.studentFirst,
-            lastNameCo: $scope.studentCoLast,
-            firstNameCo: $scope.studentCoFirst,
-            lastNameCo2: $scope.studentCo2Last,
-            firstNameCo2: $scope.studentCo2First,
+            flexibleType: $scope.flexibleType,
+            lastName: $scope.lastName,
+            firstName: $scope.firstName,
+            lastNameCo: $scope.lastNameCo,
+            firstNameCo: $scope.firstNameCo,
+            lastNameCo2: $scope.lastNameCo2,
+            firstNameCo2: $scope.firstNameCo2,
             studentEmail: $scope.studentEmail,
             studentCoEmail: $scope.studentCoEmail,
             studentCo2Email: $scope.studentCo2Email,
@@ -57,10 +55,10 @@ angular.module('ursamajorApp')
             feature: $scope.feature,
             mediaNeeds: $scope.mediaNeeds,
             otherNeeds: $scope.otherNeeds,
-            tshirt: $scope.sizes
-            //tshirtCo: $scope.,
-            //tshirtCo2: String,
-            //otherInfo: ,
-        }).success(function())
+            tshirt: $scope.sizes,
+            tshirtCo: $scope.tshirtCo,
+            tshirtCo2: $scope.otherShirt,
+            otherInfo: $scope.otherInfo
+        }).success(function(thatTHing){})
         }
   });
