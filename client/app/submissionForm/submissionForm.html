@@ -425,10 +425,10 @@
         <label>Sponsoring Organization or Fund (Choose Any Applicable)</label>
         <form required>
 
-                <input type="checkbox" name="UROP">UPROP<br>
-                <input type="checkbox" name="MAP">MAPP<br>
-                <input type="checkbox" name="MMP">MMPP<br>
-                <input type="checkbox" name="LSAMP">LSAMPP<br>
+                <input type="checkbox" name="UROP">UROP<br>
+                <input type="checkbox" name="MAP">MAP<br>
+                <input type="checkbox" name="MMP">MMP<br>
+                <input type="checkbox" name="LSAMP">LSAMP<br>
                 <input type="checkbox" name="otherFund">Other:<input type="text" name="otherFund">
 
         </form>
@@ -456,9 +456,13 @@
             The featured presenter will have more time, as well as a bigger room than regular presentations.
             Would you be interested in having your presentation featured during the opening ceremony?
         </label>
-        <form required ng-repeat="feature in yesORno">
+        <form required>
             <label>
-                <input type="radio" name="feature">{{feature}}
+                <input type="radio" name="feature">Yes
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="feature">No
             </label>
         </form>
     </div>
@@ -487,7 +491,7 @@
                 <option ng-repeat="size in sizes">{{size}}</option>
             </select>
         </label>
-
+        <br>
         <label>T-Shirt for STUDENT CO-PRESENTER(S) (Check all needed, if multiple sizes (e.g., 2 mediums) are needed, indicate the total number in the "other" response)</label>
         <p>All sizes are US adult sizes</p>
         <form ng-repeat="size in sizes">
