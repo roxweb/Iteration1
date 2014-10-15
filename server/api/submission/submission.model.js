@@ -4,7 +4,7 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var SubmissionSchema = new Schema({
-    advisorMeet: Boolean,
+    adviserMeet: Boolean,
     titleName: String,
     format: String,
     abstract: String,
@@ -20,7 +20,7 @@ var SubmissionSchema = new Schema({
     studentCoEmail: String,
     studentCo2Email: String,
     discipline: String,
-    sponsor: String,
+    sponsor: Array,
     adviser: String,
     adviserEmail: String,
     feature: Boolean,

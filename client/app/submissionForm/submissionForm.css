@@ -1,0 +1,9 @@
+.stacked {
+    display: inline
+
+}
+
+.stacked:after {
+    content: "\a";
+    white-space: pre;
+}

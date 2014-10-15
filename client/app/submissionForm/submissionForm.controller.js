@@ -9,6 +9,19 @@ angular.module('ursamajorApp')
             'Science or Social Science Abstract'
         ];
 
+        $scope.sponsors = [
+            'UROP',
+            'MAP',
+            'MMP',
+            'LSAMP'
+        ];
+
+        $scope.sponsorsSelected = [
+
+        ];
+
+
+
         $scope.type = [
             'Poster or Visual Display',
             'Oral Presentation',
@@ -34,6 +47,7 @@ angular.module('ursamajorApp')
 
         $scope.submitS = function() {
         $http.post('/api/submissions', {
+            adviserMeet: $scope.metWithAdviser,
             titleName: $scope.titleName,
             format: $scope.format,
             abstract: $scope.abstract,
@@ -49,7 +63,7 @@ angular.module('ursamajorApp')
             studentCoEmail: $scope.studentCoEmail,
             studentCo2Email: $scope.studentCo2Email,
             discipline: $scope.discipline,
-            //sponsor: $scope.,
+            sponsor: $scope.sponsor /*
             adviser: $scope.advisor,
             adviserEmail: $scope.advisorEmail,
             feature: $scope.feature,
@@ -58,7 +72,7 @@ angular.module('ursamajorApp')
             tshirt: $scope.sizes,
             tshirtCo: $scope.tshirtCo,
             tshirtCo2: $scope.otherShirt,
-            otherInfo: $scope.otherInfo
+            otherInfo: $scope.otherInfo*/
         }).success(function(thatTHing){})
         }
   });
