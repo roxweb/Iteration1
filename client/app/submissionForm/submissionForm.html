@@ -8,43 +8,81 @@
     <input id="metAdviserN" name="yesOrNoAdviser" value=False type="radio" ng-model="metWithAdviser"> No
     <br><br>
 
+    <h3>2015 URS Submission Form</h3>
+    <p>The UMM Undergraduate Research Symposium is a forum for UMM students to present their research, creative, and scholarly work representing the Divisions of Education, Humanities, Science and Mathematics, and Social Sciences at UMM.  Accordingly, submissions from students enrolled at other institutions will not be accepted.</p>
 
 
+    <p>URS submission descriptions:</p>
 
-    <label for="presTitle">Title of Presentation </label>
+    <h4>General criteria</h4>
+    <p>All submissions should be no more than 250 words and should contain the following elements:</p>
+    <ol>
+        <li>A concise explanation of the creative or scholarly implications of the project.  What is the creative/intellectual context of your work?</li>
+        <li>Language that is clear and comprehensible to those who are not experts in the field.</li>
+        <li>Professional tone, including appropriate word choice and correct grammar, spelling, and punctuation.</li>
+    </ol>
+
+    <p>Field-specific criteria
+        Mark the category below that best describes your project.  Your 250-word submission must also include the appropriate field-specific elements listed below.</p>
+
+    <h4>Artist statements</h4>
+    <ol>
+        <li>A concise explanation of the subject matter or concepts you are exploring (what you do).</li>
+        <li>A concise explanation of artistic goals (why you do what you do).</li>
+        <li>A concise explanation of processes, production methods, tools, media, innovations, etc. (how you do what you do).</li>
+        <li>A concise explanation of historical context, including how this work builds on, differs from, or responds to existing work or performances.</li>
+    </ol>
+
+    <h4>Humanities proposals</h4>
+    <ol>
+        <li>A concise explanation of the relevant intellectual and scholarly context of your work.</li>
+        <li>A concise explanation of how your project fits within this intellectual context.  Does it extend, revise, or complicate, or provide a new way of looking at existing work in the field?</li>
+        <li>A clear statement of argument: a specific, debatable claim, not merely a summary of others’ research.</li>
+        <li>An explanation of the significance and broader implications of your work.</li>
+    </ol>
+
+    <h4>Science & Social Science abstracts</h4>
+    <ol>
+        <li>A concise explanation of the scholarly context for the project with a statement of the project’s specific objective.</li>
+        <li>A clear explanation of the methods used to address the objective.</li>
+        <li>A clear explanation of the results or findings.</li>
+        <li>An explanation of the significance and broader implications of the project's results.</li>
+    </ol>
+       <p> If you are unsure which category best fits your project, please consult your faculty sponsor.</p>
+
+    <!--Make a text area-->
     <br>
-    <input required id="presTitle" type="text" ng-model="titleName" row="3" column="30">
+    <h4>Title of Presentation</h4>
+    <input required id="presTitle" type="text" placeholder="" ng-model="titleName">
     <br><br>
 
-
-
-    <label for="formatOfPres">Format for Submission</label>
     <br>
+    <h4>Format for Submission</h4>
     <select required id="formatOfPres" ng-model="format">
         <option ng-repeat="type in format">{{type}}</option>
     </select>
     <br><br>
 
 
-
+    <!--Make a text area-->
     <label for="abstract">Artist Statement/Proposal/Abstract (1000 character limit, approx 250 words) </label>
     <br>
-    <input required id="abstract" type="text" ng-model="abstract" row="3" column="30">
+    <h4></h4>
+    <input required id="abstract" type="text" ng-model="abstract">
     <br>
 
 
-    <!-- This doesn't work quite right now -->
-    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
     <label for="typeOfPresS">Type of Presentation (Choose One)</label>
     <br>
-    <select required id="typeOfPresS" ng-model="type">
-        <option ng-repeat="pres in type">{{pres}}</option>
+    <select required id="typeOfPresS" ng-model="typePres">
+        <option ng-repeat="pres in typesOfPres">{{pres}}</option>
     </select>
     <br>
 
 
 
-    <h4>Space Constaints</h4>
+    <h4>Because of space constraints, we may not be able to have everyone do their preferred type of presentation. If necessary, would you be willing to give your presentation in another format?</h4>
 
 
     <label for="spaceConstraintY"></label>
@@ -58,58 +96,58 @@
 
 
 
-    <label for="lastName">Last Name</label>
+    <label for="lastName">Last Name Primary Student Presenter/Contact Person </label>
     <br>
     <input  required id="lastName" type="text" ng-model="lastName" size="30">
     <br>
 
 
 
-    <label for="firstName">First Name</label>
+    <label for="firstName">First Name Primary Student Presenter/Contact Person </label>
     <br>
     <input   required id="firstName" type="text" ng-model="firstName" size="30">
     <br>
 
 
-    <label for="lastNameCo">Last Name Co</label>
+    <label for="lastNameCo">Last Name Student Co-Presenter/Contact Person</label>
     <br>
     <input  id="lastNameCo" type="text" ng-model="lastNameCo" size="30">
     <br>
 
 
 
-    <label for="firstNameCo">First Name Co</label>
+    <label for="firstNameCo">First Name Student Co-Presenter/Contact Person</label>
     <br>
     <input  id="firstNameCo" type="text" ng-model="firstNameCo" size="30">
     <br>
 
 
 
-    <label for="lastNameCo2">Last Name Co2</label>
+    <label for="lastNameCo2">Last Name Student Co-Presenter/Contact Person</label>
     <br>
     <input  id="lastNameCo2" type="text" ng-model="lastNameCo2" size="30">
     <br>
 
 
-    <label for="firstNameCo2">First Name Co2</label>
+    <label for="firstNameCo2">First Name Student Co-Presenter/Contact Person</label>
     <br>
     <input  id="firstNameCo2" type="text" ng-model="firstNameCo2" size="30">
     <br>
-
-
-    <label for="presEmail">Presenter Email</label>
     <br>
+
+    <label for="presEmail">Primary student email</label>
+    <p>Please complete with full email (ex. include @morris.umn.edu)</p>
     <input required id="presEmail" type="text" ng-model="studentEmail" size="30">
     <br>
 
 
-    <label for="presEmailCo">Presenter Email Co</label>
+    <label for="presEmailCo">Co-presenter student email</label>
     <br>
     <input  id="presEmailCo" type="text" ng-model="studentCoEmail" size="30">
     <br>
 
 
-    <label for="presEmailCo2">Presenter Email Co2</label>
+    <label for="presEmailCo2">Co-presenter student email</label>
     <br>
     <input  id="presEmailCo2" type="text" ng-model="studentCo2Email" size="30">
     <br>
@@ -122,13 +160,82 @@
     <br>
 
 
-
+    <!-- Needs the other selection to be added -->
     <label for="sponsorOrganization">Sponsoring Organization or Fund (Choose Any Applicable)</label>
     <br>
-        <label class = "stacked" ng-repeat="sponsor in sponsors">
+        <label required class = "stacked" ng-repeat="sponsor in sponsors">
             <input id="sponsorOrganization" type="checkbox" ng-value="{{sponsor}}" ng-true-value="{{sponsor}}" ng-false-value="" ng-model="sponsorsSelected[$index]">{{sponsor}}
-            <br>
         </label>
+    <label>Other:</label>
+    <input id="sponsorOther" type="text" ng-model="sponsorSelected" placeholder="" size="30">
+    <br>
+
+
+
+    <label for="sponsorForProject">Faculty Sponsor/Project Adviser</label>
+    <br>
+    <input  required id="sponsorForProject" type="text" ng-model="advisor" size="30">
+    <br>
+
+
+
+    <label for="sponsorForProjectEmail">Faculty Sponsor/Project Adviser Email Address</label>
+    <br>
+    <input  required id="sponsorForProjectEmail" type="text" ng-model="advisorEmail" size="30">
+    <br>
+
+
+    <h4>The URS features one presentation in the opening ceremony. This presentation should have broader appeal with interdisciplinary components, and may easily accommodate a performance component. The featured presenter will have more time, as well as a bigger room than regular presentations. Would you be interested in having your presentation featured during the opening ceremony?</h4>
+    <label for="featureNeededY"></label>
+    <input id="featureNeededY" name="yesOrNoFeature" value=True type="radio" ng-model="feature"> Yes
+    <br>
+    <label for="featureNeededN"></label>
+    <input id="featureNeededN" name="yesOrNoFeature" value=False type="radio" ng-model="feature"> No
+    <br><br>
+
+
+    <label for="needsForMedia">Each presentation room will have available an overhead projector and a Macintosh or PC computer with video projection capabilities. Do you anticipate needing any additional Media Services equipment? Please explain in detail:</label>
+    <br>
+    <input id="needsForMedia" type="text" ng-model="mediaNeeds" size="30">
+    <br>
+
+
+
+
+    <label for="needsForOther">Do you anticipate any special room location, non-media services equipment (i.e., recital hall, piano, etc.), or scheduling requirements (i.e., several groups holding a forum that would require more than the allotted 15 minutes)? Please explain in detail.s</label>
+    <br>
+    <input id="needsForOther" type="text" ng-model="otherNeeds" size="30">
+    <br>
+
+
+
+    <label required for="tshirtForPres">T-Shirt for PRIMARY STUDENT PRESENTER</label>
+    <br>
+    <select required id="tshirtForPres" ng-model="tshirt">
+        <option ng-repeat="size in sizes">{{size}}</option>
+    </select>
+    <br><br>
+
+    <label for="tshirtForCo">T-Shirt for STUDENT CO-PRESENTER</label>
+    <br>
+    <select required id="tshirtForCo" ng-model="tshirtCo">
+        <option ng-repeat="size in sizes">{{size}}</option>
+    </select>
+    <br><br>
+
+
+    <label for="tshirtForCo2">T-Shirt for STUDENT CO-PRESENTER</label>
+    <br>
+    <select required id="tshirtForCo2" ng-model="tshirtCo2">
+        <option ng-repeat="size in sizes">{{size}}</option>
+    </select>
+    <br><br>
+
+
+    <!--Make a text area-->
+    <label for="otherThings">Is there anything else you would like us to know about your presentation?</label>
+    <br>
+    <input id="otherThings" type="text" ng-model="otherInfo" size="30">
     <br>
 
 

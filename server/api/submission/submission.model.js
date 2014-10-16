@@ -28,6 +28,7 @@ var SubmissionSchema = new Schema({
     otherNeeds: String,
     tshirt: String,
     tshirtCo: String,
+    tshirtCo2: String,
     otherInfo: String
 });
 

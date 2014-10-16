@@ -22,7 +22,7 @@ angular.module('ursamajorApp')
 
 
 
-        $scope.type = [
+        $scope.typesOfPres = [
             'Poster or Visual Display',
             'Oral Presentation',
             'Performance'
@@ -35,6 +35,10 @@ angular.module('ursamajorApp')
             'X-Large',
             'XX-Large'
         ];
+
+        $scope.tshirtSize = [
+
+        ]
 
         $scope.yesORno = [
             'Yes',
@@ -51,7 +55,7 @@ angular.module('ursamajorApp')
             titleName: $scope.titleName,
             format: $scope.format,
             abstract: $scope.abstract,
-            typeofPres: $scope.type,
+            typeOfPres: $scope.typePres,
             flexibleType: $scope.flexibleType,
             lastName: $scope.lastName,
             firstName: $scope.firstName,
@@ -63,16 +67,16 @@ angular.module('ursamajorApp')
             studentCoEmail: $scope.studentCoEmail,
             studentCo2Email: $scope.studentCo2Email,
             discipline: $scope.discipline,
-            sponsor: $scope.sponsor /*
+            sponsor: $scope.sponsorsSelected,
             adviser: $scope.advisor,
             adviserEmail: $scope.advisorEmail,
             feature: $scope.feature,
             mediaNeeds: $scope.mediaNeeds,
             otherNeeds: $scope.otherNeeds,
-            tshirt: $scope.sizes,
+            tshirt: $scope.tshirt,
             tshirtCo: $scope.tshirtCo,
-            tshirtCo2: $scope.otherShirt,
-            otherInfo: $scope.otherInfo*/
+            tshirtCo2: $scope.tshirtCo2,
+            otherInfo: $scope.otherInfo
         }).success(function(thatTHing){})
         }
   });
