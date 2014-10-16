@@ -58,25 +58,25 @@
 
     <br>
     <h4>Format for Submission</h4>
-    <select required id="formatOfPres" ng-model="format">
+    <select required id="formatOfPres" ng-model="format" placeholder="">
         <option ng-repeat="type in format">{{type}}</option>
     </select>
     <br><br>
 
 
     <!--Make a text area-->
-    <label for="abstract">Artist Statement/Proposal/Abstract (1000 character limit, approx 250 words) </label>
     <br>
-    <h4></h4>
-    <input required id="abstract" type="text" ng-model="abstract">
+    <h4>Artist Statement/Proposal/Abstract (1000 character limit, approx 250 words)</h4>
+    <input required id="abstract" type="text" ng-model="abstract" placeholder="">
     <br>
 
 
 
     <label for="typeOfPresS">Type of Presentation (Choose One)</label>
+    <h4></h4>
     <br>
     <select required id="typeOfPresS" ng-model="typePres">
-        <option ng-repeat="pres in typesOfPres">{{pres}}</option>
+        <option ng-repeat="pres in typesOfPres" placeholder="">{{pres}}</option>
     </select>
     <br>
 
@@ -87,76 +87,76 @@
 
     <label for="spaceConstraintY"></label>
 
-    <input id="spaceConstraintY" value=True name="yesOrNoSpace" type="radio" ng-model="flexibleType"> Yes
+    <input id="spaceConstraintY" value=True name="yesOrNoSpace" type="radio" ng-model="flexibleType" placeholder=""> Yes
     <br>
     <label for="spaceConstraintN"></label>
 
-    <input id="spaceConstraintN" value=False name="yesOrNoSpace" type="radio" ng-model="flexibleType"> No
+    <input id="spaceConstraintN" value=False name="yesOrNoSpace" type="radio" ng-model="flexibleType" placeholder=""> No
     <br>
 
 
 
     <label for="lastName">Last Name Primary Student Presenter/Contact Person </label>
     <br>
-    <input  required id="lastName" type="text" ng-model="lastName" size="30">
+    <input  required id="lastName" type="text" ng-model="lastName" size="30" placeholder="">
     <br>
 
 
 
     <label for="firstName">First Name Primary Student Presenter/Contact Person </label>
     <br>
-    <input   required id="firstName" type="text" ng-model="firstName" size="30">
+    <input   required id="firstName" type="text" ng-model="firstName" size="30" placeholder="">
     <br>
 
 
     <label for="lastNameCo">Last Name Student Co-Presenter/Contact Person</label>
     <br>
-    <input  id="lastNameCo" type="text" ng-model="lastNameCo" size="30">
+    <input  id="lastNameCo" type="text" ng-model="lastNameCo" size="30" placeholder="">
     <br>
 
 
 
     <label for="firstNameCo">First Name Student Co-Presenter/Contact Person</label>
     <br>
-    <input  id="firstNameCo" type="text" ng-model="firstNameCo" size="30">
+    <input  id="firstNameCo" type="text" ng-model="firstNameCo" size="30" placeholder="">
     <br>
 
 
 
     <label for="lastNameCo2">Last Name Student Co-Presenter/Contact Person</label>
     <br>
-    <input  id="lastNameCo2" type="text" ng-model="lastNameCo2" size="30">
+    <input  id="lastNameCo2" type="text" ng-model="lastNameCo2" size="30" placeholder="">
     <br>
 
 
     <label for="firstNameCo2">First Name Student Co-Presenter/Contact Person</label>
     <br>
-    <input  id="firstNameCo2" type="text" ng-model="firstNameCo2" size="30">
+    <input  id="firstNameCo2" type="text" ng-model="firstNameCo2" size="30" placeholder="">
     <br>
     <br>
 
     <label for="presEmail">Primary student email</label>
     <p>Please complete with full email (ex. include @morris.umn.edu)</p>
-    <input required id="presEmail" type="text" ng-model="studentEmail" size="30">
+    <input required id="presEmail" type="text" ng-model="studentEmail" size="30" placeholder="">
     <br>
 
 
     <label for="presEmailCo">Co-presenter student email</label>
     <br>
-    <input  id="presEmailCo" type="text" ng-model="studentCoEmail" size="30">
+    <input  id="presEmailCo" type="text" ng-model="studentCoEmail" size="30" placeholder="">
     <br>
 
 
     <label for="presEmailCo2">Co-presenter student email</label>
     <br>
-    <input  id="presEmailCo2" type="text" ng-model="studentCo2Email" size="30">
+    <input  id="presEmailCo2" type="text" ng-model="studentCo2Email" size="30" placeholder="">
     <br>
 
 
 
     <label for="disciplineProject">Academic Discipline for Project</label>
     <br>
-    <input  required id="disciplineProject" type="text" ng-model="discipline" size="30">
+    <input  required id="disciplineProject" type="text" ng-model="discipline" size="30" placeholder="">
     <br>
 
 
@@ -174,29 +174,29 @@
 
     <label for="sponsorForProject">Faculty Sponsor/Project Adviser</label>
     <br>
-    <input  required id="sponsorForProject" type="text" ng-model="advisor" size="30">
+    <input  required id="sponsorForProject" type="text" ng-model="advisor" size="30" placeholder="">
     <br>
 
 
 
     <label for="sponsorForProjectEmail">Faculty Sponsor/Project Adviser Email Address</label>
     <br>
-    <input  required id="sponsorForProjectEmail" type="text" ng-model="advisorEmail" size="30">
+    <input  required id="sponsorForProjectEmail" type="text" ng-model="advisorEmail" size="30" placeholder="">
     <br>
 
 
     <h4>The URS features one presentation in the opening ceremony. This presentation should have broader appeal with interdisciplinary components, and may easily accommodate a performance component. The featured presenter will have more time, as well as a bigger room than regular presentations. Would you be interested in having your presentation featured during the opening ceremony?</h4>
     <label for="featureNeededY"></label>
-    <input id="featureNeededY" name="yesOrNoFeature" value=True type="radio" ng-model="feature"> Yes
+    <input id="featureNeededY" name="yesOrNoFeature" value=True type="radio" ng-model="feature" placeholder=""> Yes
     <br>
     <label for="featureNeededN"></label>
-    <input id="featureNeededN" name="yesOrNoFeature" value=False type="radio" ng-model="feature"> No
+    <input id="featureNeededN" name="yesOrNoFeature" value=False type="radio" ng-model="feature" placeholder=""> No
     <br><br>
 
 
     <label for="needsForMedia">Each presentation room will have available an overhead projector and a Macintosh or PC computer with video projection capabilities. Do you anticipate needing any additional Media Services equipment? Please explain in detail:</label>
     <br>
-    <input id="needsForMedia" type="text" ng-model="mediaNeeds" size="30">
+    <input id="needsForMedia" type="text" ng-model="mediaNeeds" size="30" placeholder="">
     <br>
 
 
@@ -204,21 +204,21 @@
 
     <label for="needsForOther">Do you anticipate any special room location, non-media services equipment (i.e., recital hall, piano, etc.), or scheduling requirements (i.e., several groups holding a forum that would require more than the allotted 15 minutes)? Please explain in detail.s</label>
     <br>
-    <input id="needsForOther" type="text" ng-model="otherNeeds" size="30">
+    <input id="needsForOther" type="text" ng-model="otherNeeds" size="30" placeholder="">
     <br>
 
 
 
     <label required for="tshirtForPres">T-Shirt for PRIMARY STUDENT PRESENTER</label>
     <br>
-    <select required id="tshirtForPres" ng-model="tshirt">
+    <select required id="tshirtForPres" ng-model="tshirt" placeholder="">
         <option ng-repeat="size in sizes">{{size}}</option>
     </select>
     <br><br>
 
     <label for="tshirtForCo">T-Shirt for STUDENT CO-PRESENTER</label>
     <br>
-    <select required id="tshirtForCo" ng-model="tshirtCo">
+    <select required id="tshirtForCo" ng-model="tshirtCo" placeholder="">
         <option ng-repeat="size in sizes">{{size}}</option>
     </select>
     <br><br>
@@ -226,7 +226,7 @@
 
     <label for="tshirtForCo2">T-Shirt for STUDENT CO-PRESENTER</label>
     <br>
-    <select required id="tshirtForCo2" ng-model="tshirtCo2">
+    <select required id="tshirtForCo2" ng-model="tshirtCo2" placeholder="">
         <option ng-repeat="size in sizes">{{size}}</option>
     </select>
     <br><br>
@@ -235,7 +235,7 @@
     <!--Make a text area-->
     <label for="otherThings">Is there anything else you would like us to know about your presentation?</label>
     <br>
-    <input id="otherThings" type="text" ng-model="otherInfo" size="30">
+    <input id="otherThings" type="text" ng-model="otherInfo" size="30" placeholder="">
     <br>
 
 
