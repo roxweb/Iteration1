@@ -4,13 +4,16 @@
         <title>New URS Submission Form</title>
     </head>
     <body>
-        <label>Add New ...</label>
-        <select>
-            <option>Text</option>
-            <option>Dropdown</option>
-            <option>Small Textbox</option>
-            <option>Large Textbox</option>
-            <option>Options/Checkboxes</option>
-        </select>
+        <label>Add New ...
+            <select onchange="newItem()">
+                <option value="text">Text</option>
+                <option value="dropdown">Dropdown</option>
+                <option value="sText">Small Textbox</option>
+                <option value="lText">Large Textbox</option>
+                <option value="list">Checkboxes/Radio</option>
+            </select>
+        </label>
+
+
     </body>
 </html>
